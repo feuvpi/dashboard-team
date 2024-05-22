@@ -4,8 +4,8 @@
 	export let data: PageData;
 </script>
 
-<form action="#">
-	<div class="p-6.5">
+<form class="flex justify-center" action="#">
+	<div class="w-2/5">
 		<div class="mb-4.5 flex flex-col gap-6 xl:flex-row">
 			<div class="w-full xl:w-1/2">
 				<label class="mb-3 block text-sm font-medium text-black dark:text-white">
