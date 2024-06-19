@@ -2,7 +2,9 @@
 	import { openSidebar } from './store.ts';
 </script>
 
-<header class="bg-white h-16 items-center relative shadow w-full z-10 md:h-20">
+<header
+	class="bg-white h-22 items-center relative shadow w-full z-99999 md:h-20 drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none"
+>
 	<div class="flex flex-center flex-col h-full justify-center mx-auto px-3 relative">
 		<div class="flex items-center pl-1 relative w-full sm:ml-0 sm:pr-2 lg:max-w-68">
 			<div class="flex left-0 relative w-3/4">
@@ -19,7 +21,7 @@
 				</div>
 			</div>
 			<div class="flex items-center justify-end ml-5 p-1 relative w-full sm:mr-0 sm:right-auto">
-				<span class="block pr-5">
+				<!-- <span class="block pr-5">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-5 text-gray-600 w-5"
@@ -32,8 +34,8 @@
 							clip-rule="evenodd"
 						/>
 					</svg>
-				</span>
-				<span class="block pr-5">
+				</span> -->
+				<!-- <span class="block pr-5">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-6 w-6 text-gray-600"
@@ -45,28 +47,28 @@
 							d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
 						/>
 					</svg>
-				</span>
+				</span> -->
 				<span class="block pr-5 relative">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-6 text-gray-600 w-6"
-						viewBox="0 0 20 20"
-						fill="currentColor"
-					>
-						<path
-							fill-rule="evenodd"
-							d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
-							clip-rule="evenodd"
-						/>
+					<svg class="h-6 w-6" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g id="Interface / Exit">
+							<path
+								id="Vector"
+								d="M12 15L15 12M15 12L12 9M15 12H4M4 7.24802V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H7.19691C6.07899 20 5.5192 20 5.0918 19.7822C4.71547 19.5905 4.40973 19.2839 4.21799 18.9076C4 18.4798 4 17.9201 4 16.8V16.75"
+								stroke="#000000"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</g>
 					</svg>
 				</span>
-				<span class="block relative">
+				<!-- <span class="block relative">
 					<img
 						alt="profile"
 						src="/images/1.jpg"
 						class="h-10 mx-auto object-cover rounded-full w-10"
 					/>
-				</span>
+				</span> -->
 			</div>
 		</div>
 	</div>

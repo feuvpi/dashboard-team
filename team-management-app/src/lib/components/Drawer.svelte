@@ -7,7 +7,7 @@
 	import * as Drawer from '$lib/components/ui/drawer/index.js';
 	import { mediaQuery } from 'svelte-legos';
 	import Badge from './ui/badge/badge.svelte';
-	import DropAnexos from './DropAnexos.svelte';
+	// import DropAnexos from './DropAnexos.svelte';
 
 	const isDesktop = mediaQuery('(min-width: 768px)');
 	let open = false;
@@ -148,7 +148,7 @@
 				>
 					<div class="relative w-full">
 						<div class="items-center justify-center max-w-xl mx-auto">
-							<DropAnexos />
+							<!-- <DropAnexos /> -->
 							<!-- <label
 								class="flex justify-center w-full h-32 px-4 dark:bg-neutral-700 transition bg-white border-2 dark:border-orange-400 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none"
 								id="drop"

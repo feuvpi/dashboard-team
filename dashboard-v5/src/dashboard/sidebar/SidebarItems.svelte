@@ -5,15 +5,15 @@
 
 	const style = {
 		title: `mx-4 text-sm whitespace-pre`,
-		inactive: `text-white`,
-		active: `font-medium text-green-400 hover:text-green-400`,
+		inactive: `text-white hover:bg-neutral-300/50 rounded-lg`,
+		active: `bg-neutral-500/70 font-medium text-green-400 hover:text-green-400 rounded-lg`,
 		link: `flex items-center justify-start my-2 p-4 w-full hover:text-white`,
 		close: `lg:duration-700 lg:ease-out lg:invisible lg:opacity-0 lg:transition-all`,
 		open: `lg:duration-500 lg:ease-in lg:h-auto lg:opacity-100 lg:transition-all lg:w-auto`
 	};
 </script>
 
-<ul class="md:pl-5">
+<ul class="md:pl-5 mx-2">
 	<li>
 		{#each data as item (item.title)}
 			<a

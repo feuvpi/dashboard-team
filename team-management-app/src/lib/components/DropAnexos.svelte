@@ -1,9 +1,8 @@
-<script>
+<script lang="ts">
 	// @ts-nocheck
+	import { onMount } from 'svelte';
 
-	const fileTempl = document.getElementById('file-template'),
-		imageTempl = document.getElementById('image-template'),
-		empty = document.getElementById('empty');
+	let fileTempl, imageTempl, empty;
 
 	// use to store pre selected files
 	let FILES = {};
@@ -38,8 +37,32 @@
 		FILES[objectURL] = file;
 	}
 
-	const gallery = document.getElementById('gallery'),
+	function dropHandler(ev) {
+		ev.preventDefault();
+		for (const file of ev.dataTransfer.files) {
+			addFile(file);
+		}
+	}
+
+	onMount(() => {
+		gallery = document.getElementById('gallery');
 		overlay = document.getElementById('overlay');
+		hidden = document.getElementById('hidden-input');
+		button = document.getElementById('button');
+		submit = document.getElementById('submit');
+		cancel = document.getElementById('cancel');
+
+		// rest of your code here...
+
+		button.onclick = () => hidden.click();
+		hidden.onchange = (e) => {
+			for (const file of e.target.files) {
+				addFile(gallery, file);
+			}
+		};
+
+		// ...and so on...
+	});
 
 	// click the hidden input of type file if the visible button is clicked
 	// and capture the selected files
