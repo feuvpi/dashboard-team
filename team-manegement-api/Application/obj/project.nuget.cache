@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "B6qs8/5VIcHtBGhTfCgpfRlZ8xkIqTJgqIE/96XaCcFIZsAvAhAYVaTTLpD3O3ECBeY3FiK3L03mg10wAl5yig==",
+  "success": true,
+  "projectFilePath": "M:\\dev\\devprojects\\dashboard-ssafc\\team-manegement-api\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Feu's m15 R6\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512"
+  ],
+  "logs": []
+}
