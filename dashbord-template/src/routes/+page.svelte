@@ -1,6 +1,6 @@
 <script lang="ts">
-	import DashboardPage from '$lib/components/DashboardPage.svelte';
+	import AppPage from '$lib/components/AppLayout/AppPage.svelte';
 	import ContentDashboardHome from './ContentDashboardHome.svelte';
 </script>
 
-<DashboardPage props={{ contentComponent: ContentDashboardHome }} />
+<AppPage props={{ contentComponent: ContentDashboardHome }} />

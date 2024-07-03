@@ -3,11 +3,11 @@
 	import AppSideMenu from './AppSideMenu.svelte';
 	import AppHeader from './AppHeader.svelte';
 
-	interface AppPageProps {
-		contentComponent: any;
-	}
+	// interface AppPageProps {
+	// 	contentComponent: any;
+	// }
 
-	export let props: AppPageProps;
+	// export let props: AppPageProps;
 
 	let isSideMenuOpen = false;
 	let isPagesMenuOpen = false;
@@ -83,6 +83,7 @@
 				isProfileMenuOpen: isProfileMenuOpen
 			}}
 		/>
-		<svelte:component this={props.contentComponent} />
+		<slot />
+		<!-- <svelte:component this={props.contentComponent} /> -->
 	</div>
 </div>

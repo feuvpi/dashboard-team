@@ -1,6 +1,6 @@
 <script lang="ts">
-	import DashboardDesktopSideMenu from './DashboardDesktopSideMenu.svelte';
-	import DashboardMobileSideMenu from './DashboardMobileSideMenu.svelte';
+	import AppDesktopSideMenu from './AppDesktopSideMenu.svelte';
+	import AppMobileSideMenu from './AppMobileSideMenu.svelte';
 
 	interface DashboardSideMenuProps {
 		isPagesMenuOpen: boolean;
@@ -11,8 +11,8 @@
 </script>
 
 <!-- Desktop sidebar -->
-<DashboardDesktopSideMenu {props} />
+<AppDesktopSideMenu {props} />
 <!-- Mobile sidebar -->
 {#if props.isSideMenuOpen}
-	<DashboardMobileSideMenu {props} />
+	<AppMobileSideMenu {props} />
 {/if}

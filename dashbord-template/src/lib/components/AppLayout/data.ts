@@ -4,12 +4,12 @@ export const data = [
 		content: [
 			{
 				title: 'Lista de Reservas',
-				icon: HomeIcon,
+				// icon: HomeIcon,
 				link: '/acesso/reservas'
 			},
 			{
 				title: 'Nova Reserva',
-				icon: MediasIcon,
+				// icon: MediasIcon,
 				link: '/acesso/reservas/reserva'
 			}
 		]
@@ -19,12 +19,12 @@ export const data = [
 		content: [
 			{
 				title: 'Meus Condominios',
-				icon: TerminalIcon,
+				// icon: TerminalIcon,
 				link: '/acesso/meuscondominios'
 			},
 			{
 				title: 'Procurar Condominios',
-				icon: RecycleBinIcon,
+				// icon: RecycleBinIcon,
 				link: '/acesso/condominios'
 			}
 		]
