@@ -17,12 +17,12 @@
 	class="z-10 border-b-[1px] border-gray-200 bg-white py-4 shadow-sm dark:border-gray-700 dark:bg-gray-800"
 >
 	<div
-		class="container mx-auto flex h-full items-center justify-between px-6 text-purple-600 dark:text-purple-300"
+		class="container mx-auto flex h-full items-center justify-between px-6 text-orange-600 dark:text-orange-300"
 	>
 		<!-- Mobile hamburger -->
 		<button
 			type="button"
-			class="mr-5 -ml-1 rounded-md p-1 focus:outline-none focus:ring-[3px] focus:ring-purple-200 dark:focus:ring-gray-500 md:hidden"
+			class="mr-5 -ml-1 rounded-md p-1 focus:outline-none focus:ring-[3px] focus:ring-orange-200 dark:focus:ring-gray-500 md:hidden"
 			on:click={() => (isSideMenuOpen = !isSideMenuOpen)}
 			aria-label="Menu"
 		>
@@ -38,9 +38,14 @@
 		<!-- <div class="flex flex-1 justify-center lg:mr-32"> -->
 		<div class="flex flex-1 justify-center">
 			<!-- <div class="relative mr-6 w-full max-w-xl focus-within:text-purple-500"> -->
-			<div class="relative mr-6 w-full focus-within:text-purple-500">
+			<div class="relative mr-6 w-full focus-within:text-orange-500">
 				<div class="absolute inset-y-0 flex items-center pl-2">
-					<svg class="h-4 w-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+					<svg
+						class="h-4 w-4 text-orange-600"
+						aria-hidden="true"
+						fill="currentColor"
+						viewBox="0 0 20 20"
+					>
 						<path
 							fill-rule="evenodd"
 							d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
@@ -49,10 +54,10 @@
 					</svg>
 				</div>
 				<input
-					class="form-input w-full rounded-md border-0 bg-gray-100 pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 focus:border-purple-300 focus:bg-white focus:placeholder-gray-500 focus:outline-none focus:ring-[3px] focus:ring-purple-200 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:placeholder-gray-600 dark:focus:ring-gray-500"
+					class="form-input w-full rounded-md border-0 bg-gray-100 pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 focus:border-orange-300 focus:bg-white focus:placeholder-gray-500 focus:outline-none focus:ring-[3px] focus:ring-orange-200 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:placeholder-gray-600 dark:focus:ring-gray-500"
 					type="text"
-					placeholder="Search..."
-					aria-label="Search..."
+					placeholder="Procurar..."
+					aria-label="Procurar..."
 				/>
 			</div>
 		</div>
@@ -60,7 +65,7 @@
 			<!-- Theme toggler -->
 			<li class="flex">
 				<button
-					class="rounded-md focus:outline-none focus:ring-[3px] focus:ring-purple-200 dark:focus:ring-gray-500"
+					class="rounded-md focus:outline-none focus:ring-[3px] focus:ring-orange-200 dark:focus:ring-gray-500"
 					on:click={props.toggleTheme}
 					aria-label="Toggle color mode"
 				>
@@ -87,7 +92,7 @@
 					on:clickoutside={() => {
 						if (props.isNotificationsMenuOpen) props.isNotificationsMenuOpen = false;
 					}}
-					class="relative rounded-md align-middle focus:outline-none focus:ring-[3px] focus:ring-purple-200 dark:focus:ring-gray-500"
+					class="relative rounded-md align-middle focus:outline-none focus:ring-[3px] focus:ring-orange-200 dark:focus:ring-gray-500"
 					on:click={() => {
 						props.isNotificationsMenuOpen = !props.isNotificationsMenuOpen;
 					}}
@@ -157,7 +162,7 @@
 					on:clickoutside={() => {
 						if (props.isProfileMenuOpen) props.isProfileMenuOpen = false;
 					}}
-					class="rounded-full align-middle focus:outline-none focus:ring-[3px] focus:ring-purple-200 dark:focus:ring-gray-500"
+					class="rounded-full align-middle focus:outline-none focus:ring-[3px] focus:ring-orange-200 dark:focus:ring-gray-500"
 					on:click={() => {
 						props.isProfileMenuOpen = !props.isProfileMenuOpen;
 					}}
@@ -179,7 +184,7 @@
 					>
 						<li class="flex">
 							<!-- svelte-ignore a11y-invalid-attribute -->
-							<a
+							<abackdrop-blur-md
 								class="inline-flex w-full items-center rounded-md px-2 py-1 text-sm font-semibold transition-colors duration-150 hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
 								href=""
 							>
@@ -196,7 +201,7 @@
 									<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
 								</svg>
 								<span>Profile</span>
-							</a>
+							</abackdrop-blur-md>
 						</li>
 						<li class="flex">
 							<!-- svelte-ignore a11y-invalid-attribute -->

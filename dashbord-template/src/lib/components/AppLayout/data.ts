@@ -1,32 +1,40 @@
+import HomeIcon from './icons/HomeIcon.svelte';
+import MediasIcon from './icons/MediasIcon.svelte';
+
 export const data = [
 	{
-		section: 'MINHAS RESERVAS',
+		section: 'MENU PRINCIPAL',
 		content: [
 			{
-				title: 'Lista de Reservas',
-				// icon: HomeIcon,
-				link: '/acesso/reservas'
+				title: 'Plantel',
+				icon: HomeIcon,
+				grouping: true,
+				sublinks: [
+					{
+						title: 'Lista',
+						link: '/app/atleta'
+					},
+					{
+						title: 'Form',
+						link: '/app/atleta/form'
+					}
+				]
 			},
 			{
-				title: 'Nova Reserva',
-				// icon: MediasIcon,
-				link: '/acesso/reservas/reserva'
+				title: 'Times',
+				icon: MediasIcon,
+				link: '/app/times'
+			},
+			{
+				title: 'Partidas',
+				icon: MediasIcon,
+				link: '/app/partidas'
+			},
+			{
+				title: 'Desempenho',
+				icon: MediasIcon,
+				link: '/app/desempenho'
 			}
 		]
 	},
-	{
-		section: 'CONDOMÍNIOS',
-		content: [
-			{
-				title: 'Meus Condominios',
-				// icon: TerminalIcon,
-				link: '/acesso/meuscondominios'
-			},
-			{
-				title: 'Procurar Condominios',
-				// icon: RecycleBinIcon,
-				link: '/acesso/condominios'
-			}
-		]
-	}
-];
+]
