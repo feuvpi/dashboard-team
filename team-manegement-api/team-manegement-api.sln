@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "team-manegement-api\API.csproj", "{88E221ED-3B38-4D70-AE49-525FCB0B86CC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4FD29E4F-030E-44C0-B901-9C0931EC1BB3} = {4FD29E4F-030E-44C0-B901-9C0931EC1BB3}
+		{D16D8CA5-2129-4502-AF77-50229AD526AC} = {D16D8CA5-2129-4502-AF77-50229AD526AC}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{D16D8CA5-2129-4502-AF77-50229AD526AC}"
 EndProject

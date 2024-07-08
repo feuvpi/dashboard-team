@@ -9,7 +9,7 @@
 
 //        public static IServiceCollection AddInfrastructureDI(this IServiceCollection services, IConfiguration configuration)
 //        {
-//            services.AddDbContext<App
+//            services.AddDbContext < App
 //        }
 //    }
 //}

@@ -7,7 +7,8 @@ namespace team_manegement_api.Core
         public string TimeAdversario { get; set; }
         public DateTime DataHorario { get; set; }
         public string Local {  get; set; }  
-        public List<Atleta> JogadoresRelacionados { get; set; }   
-        public int GolsRealizados { get; set; }   
+        public List<Atleta> JogadoresRelacionados { get; set; }
+        public int GolsAFavor { get; set; }
+        public int GolsContra { get; set; }   
     }
 }

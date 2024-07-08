@@ -39,7 +39,7 @@
 			isProfileMenuOpen = false;
 		}
 	}
-
+	//absolute right-0 w-40 mt-1 bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300
 	onMount(() => {
 		isDarkTheme = getThemeFromLocalStorage();
 		window.addEventListener('keydown', handleKeyDown);

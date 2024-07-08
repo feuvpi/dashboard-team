@@ -1,8 +1,6 @@
 ﻿using Core.Interfaces;
 using Dapper;
 using Infrastructure.Data;
-using Microsoft.Extensions.Configuration;
-using Npgsql;
 using System.Data;
 
 namespace Infrastructure.Repositories
@@ -11,17 +9,6 @@ namespace Infrastructure.Repositories
     {
         //private readonly IConfiguration _configuration;
         //private readonly string _connectionString;
-
-        //public BaseRepository(IConfiguration configuration)
-        //{
-        //    _configuration = configuration;
-        //    _connectionString = _configuration.GetConnectionString("DefaultConnection");
-        //}
-
-        //private IDbConnection CreateConnection()
-        //{
-        //    return new NpgsqlConnection(_connectionString);
-        //}
 
         private readonly DapperContext _context;
 
@@ -35,7 +22,7 @@ namespace Infrastructure.Repositories
             return _context.CreateConnection();
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(Guid id)
         {
             using (var connection = CreateConnection())
             {
@@ -53,30 +40,37 @@ namespace Infrastructure.Repositories
             }
         }
 
-        public async Task AddAsync(T entity)
+        public async Task<T> AddAsync(T entity)
         {
             using (var connection = CreateConnection())
             {
                 var query = $"INSERT INTO {typeof(T).Name}s ({string.Join(", ", GetProperties(entity))}) VALUES ({string.Join(", ", GetProperties(entity, "@"))})";
-                await connection.ExecuteAsync(query, entity);
+                var rowsAffected = await connection.ExecuteAsync(query, entity);
+                if (rowsAffected > 0) return entity;
+                else return null;
+                
             }
         }
 
-        public async Task UpdateAsync(T entity)
+        public async Task<bool> UpdateAsync(T entity)
         {
             using (var connection = CreateConnection())
             {
                 var query = $"UPDATE {typeof(T).Name}s SET {string.Join(", ", GetProperties(entity, "=", "@"))} WHERE Id = @Id";
-                await connection.ExecuteAsync(query, entity);
+                var rowsAffected = await connection.ExecuteAsync(query, entity);
+                if (rowsAffected > 0) return true;
+                else return false;
             }
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(Guid id)
         {
             using (var connection = CreateConnection())
             {
                 var query = $"DELETE FROM {typeof(T).Name}s WHERE Id = @Id";
-                await connection.ExecuteAsync(query, new { Id = id });
+                var rowsAffected = await connection.ExecuteAsync(query, new { Id = id });
+                if (rowsAffected > 0) return true;
+                else return false;
             }
         }
 
