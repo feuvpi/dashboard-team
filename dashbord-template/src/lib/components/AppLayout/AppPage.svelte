@@ -73,7 +73,7 @@
 <div class="flex h-screen bg-gray-50 dark:bg-gray-900" class:overflow-hidden={!isSideMenuOpen}>
 	<AppSideMenu props={{ isPagesMenuOpen: isPagesMenuOpen, isSideMenuOpen: isSideMenuOpen }} />
 
-	<div class="flex w-full flex-1 flex-col">
+	<div class="flex bg-stone-100 w-full flex-1 flex-col">
 		<AppHeader
 			bind:isSideMenuOpen
 			props={{
@@ -83,7 +83,8 @@
 				isProfileMenuOpen: isProfileMenuOpen
 			}}
 		/>
-		<slot />
+		<main class="m-4 shadow-md bg-white h-full"><slot /></main>
+
 		<!-- <svelte:component this={props.contentComponent} /> -->
 	</div>
 </div>

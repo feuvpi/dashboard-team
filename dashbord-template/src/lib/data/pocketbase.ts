@@ -5,3 +5,11 @@ import { writable } from 'svelte/store';
 export const pb = new PocketBase(PUBLIC_POCKETBASE_URL)
 
 export const currentUser = writable(pb.authStore.model)
+
+export function isAuthenticated() {
+    return !!pb.authStore.token;
+}
+
+export function logout() {
+    pb.authStore.clear();
+}

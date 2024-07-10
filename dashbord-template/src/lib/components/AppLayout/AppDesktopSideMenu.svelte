@@ -22,13 +22,13 @@
 </script>
 
 <aside
-	class="z-20 hidden w-64 flex-shrink-0 overflow-y-auto border-r-[1px] border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800 md:block"
+	class="z-20 shadow-lg hidden w-64 flex-shrink-0 overflow-y-auto border-r-[1px] border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800 md:block"
 >
-	<div class="py-4 text-gray-500 dark:text-gray-400">
+	<div class="py-4 text-gray-500 dark:text-gray-400 content-center">
 		<!-- svelte-ignore a11y-invalid-attribute -->
 		<a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="/">Meu Time</a>
 		<!-- Desktop sidebar menu -->
-		<ul class="mt-6">
+		<ul class="mt-44 border-2 border-orange-200 rounded-lg mx-2">
 			<!-- <li class="relative px-6 py-3">
 				<span
 					class="absolute inset-y-0 left-0 w-1 rounded-tr-lg rounded-br-lg bg-emerald-600"
@@ -96,7 +96,7 @@
 
 							{#if props.isPagesMenuOpen}
 								<ul
-									class="mb-2 mx-2 space-y-2 overflow-hidden rounded-md bg-gray-50 p-2 text-sm font-medium text-gray-500 shadow-inner dark:bg-gray-900 dark:text-gray-400"
+									class="mb-2 mx-2 space-y-2 overflow-hidden rounded-md bg-stone-200 p-2 text-sm font-medium text-gray-500 shadow-inner dark:bg-gray-900 dark:text-gray-400"
 									aria-label="submenu"
 									in:fly|global={{ y: -20, duration: 250 }}
 									out:fly|global={{ duration: 50 }}

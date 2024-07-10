@@ -12,7 +12,7 @@ export const data = [
 				sublinks: [
 					{
 						title: 'Lista',
-						link: '/app/atleta'
+						link: '/app/plantel'
 					},
 					{
 						title: 'Form',

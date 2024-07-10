@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import type { Atleta } from '$lib/types';
+	import PageTitle from '$lib/components/PageTitle.svelte';
 
 	let atleta: Atleta = {
 		nome: '',
@@ -43,89 +44,78 @@
 	}
 </script>
 
-<main class="h-full overflow-y-auto pb-16 pt-6">
-	<h2
-		class="text-4xl mb-2 font-bold text-center bg-gradient-to-r from-orange-300 to-orange-700 bg-clip-text text-transparent"
-	>
-		Adicionar Atleta
-	</h2>
-	<form
-		method="post"
-		class="max-w-lg mx-auto bg-neutral-200 dark:bg-slate-500 p-4 shadow-md rounded-md"
-		on:submit|preventDefault={handleSubmit}
-	>
-		<div class="mb-4">
-			<label for="nome" class="block text-gray-700">Nome</label>
-			<input
-				id="nome"
-				type="text"
-				bind:value={atleta.nome}
-				class="mt-1 p-2 w-full border rounded-md"
-				required
-			/>
-		</div>
+<PageTitle name={'Adicionar Novo Atleta'} />
+<form method="post" class="max-w-xl mx-auto p-4 rounded-md" on:submit|preventDefault={handleSubmit}>
+	<div class="mb-4">
+		<label for="nome" class="block font-extrabold text-black">Nome</label>
+		<input
+			id="nome"
+			type="text"
+			bind:value={atleta.nome}
+			class="mt-1 p-2 w-full border rounded-md"
+			required
+		/>
+	</div>
 
-		<div class="mb-4">
-			<label for="nascimento" class="block text-gray-700">Data de Nascimento</label>
-			<input
-				id="nascimento"
-				type="date"
-				bind:value={atleta.nascimento}
-				class="mt-1 p-2 w-full border rounded-md"
-				required
-			/>
-		</div>
+	<div class="mb-4">
+		<label for="nascimento" class="block text-black font-extrabold">Data de Nascimento</label>
+		<input
+			id="nascimento"
+			type="date"
+			bind:value={atleta.nascimento}
+			class="mt-1 p-2 w-full border rounded-md"
+			required
+		/>
+	</div>
 
-		<div class="mb-4">
-			<label for="altura" class="block text-gray-700">Altura (m)</label>
-			<input
-				id="altura"
-				type="number"
-				step="0.01"
-				bind:value={atleta.altura}
-				class="mt-1 p-2 w-full border rounded-md"
-				required
-			/>
-		</div>
+	<div class="mb-4">
+		<label for="altura" class="block text-black font-extrabold">Altura (m)</label>
+		<input
+			id="altura"
+			type="number"
+			step="0.01"
+			bind:value={atleta.altura}
+			class="mt-1 p-2 w-full border rounded-md"
+			required
+		/>
+	</div>
 
-		<div class="mb-4">
-			<label for="peso" class="block text-gray-700">Peso (kg)</label>
-			<input
-				id="peso"
-				type="number"
-				bind:value={atleta.peso}
-				class="mt-1 p-2 w-full border rounded-md"
-				required
-			/>
-		</div>
+	<div class="mb-4">
+		<label for="peso" class="block text-black font-extrabold">Peso (kg)</label>
+		<input
+			id="peso"
+			type="number"
+			bind:value={atleta.peso}
+			class="mt-1 p-2 w-full border rounded-md"
+			required
+		/>
+	</div>
 
-		<div class="mb-4">
-			<label for="dominancia" class="block text-gray-700">Dominância</label>
-			<input
-				id="dominancia"
-				type="text"
-				bind:value={atleta.dominancia}
-				class="mt-1 p-2 w-full border rounded-md"
-				required
-			/>
-		</div>
+	<div class="mb-4">
+		<label for="dominancia" class="block text-black font-extrabold">Dominância</label>
+		<input
+			id="dominancia"
+			type="text"
+			bind:value={atleta.dominancia}
+			class="mt-1 p-2 w-full border rounded-md"
+			required
+		/>
+	</div>
 
-		<div class="mb-4">
-			<label for="posicao" class="block text-gray-700">Posição</label>
-			<input
-				id="posicao"
-				type="text"
-				bind:value={atleta.posicao}
-				class="mt-1 p-2 w-full border rounded-md"
-				required
-			/>
-		</div>
+	<div class="mb-4">
+		<label for="posicao" class="block text-black font-extrabold">Posição</label>
+		<input
+			id="posicao"
+			type="text"
+			bind:value={atleta.posicao}
+			class="mt-1 p-2 w-full border rounded-md"
+			required
+		/>
+	</div>
 
-		<div class="text-right">
-			<button
-				type="submit"
-				class="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">Salvar</button
-			>
-		</div>
-	</form>
-</main>
+	<div class="text-right">
+		<button class="px-4 py-2 w-full bg-orange-500 text-white rounded-md hover:bg-orange-600"
+			>Salvar</button
+		>
+	</div>
+</form>

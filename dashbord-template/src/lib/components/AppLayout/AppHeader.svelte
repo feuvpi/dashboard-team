@@ -48,7 +48,7 @@
 </script>
 
 <header
-	class="z-10 border-b-[1px] border-gray-200 bg-white py-4 shadow-sm dark:border-gray-700 dark:bg-gray-800"
+	class="z-10 border-b-[1px] border-gray-200 bg-white py-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 shadow-lg"
 >
 	<div
 		class="container mx-auto flex h-full items-center justify-between px-6 text-orange-600 dark:text-orange-300"
@@ -192,7 +192,7 @@
 			<!-- Profile menu -->
 
 			<ButtonDropdown on:click={() => handleState('dropdown')} {links} bind:isOpen={isOpenDropdown}>
-				<img src="/images/profile.svg" class="w-9" alt="Username" />
+				<img src="/static/assets/img/9.jpg" class="w-9" alt="Username" />
 			</ButtonDropdown>
 		</ul>
 	</div>

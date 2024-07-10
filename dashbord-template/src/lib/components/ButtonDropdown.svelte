@@ -2,9 +2,15 @@
 	import { clickoutside } from '@svelte-put/clickoutside';
 	import type { Link } from '$lib/data/links';
 	import Icon from '@iconify/svelte';
+	import { pb, logout } from '$lib/data/pocketbase';
+	import { goto } from '$app/navigation';
 
 	export let isOpen = true,
 		links: Link[] = [];
+
+	async function handleLogout() {
+		logout();
+	}
 </script>
 
 <div class="relative">
@@ -40,7 +46,7 @@
 			{/each}
 			<li class="border-t mt-2 pt-3">
 				<form method="POST">
-					<button type="button" class="btn btn-error w-full rounded-full">
+					<button type="button" class="btn btn-error w-full rounded-full" on:click={handleLogout}>
 						Logout
 						<Icon icon="solar:logout-linear" class="ml-1 text-2xl" />
 					</button>
