@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import AppSideMenu from './AppSideMenu.svelte';
 	import AppHeader from './AppHeader.svelte';
+	import Sidebar from '../sidebar/Sidebar.svelte';
+	import Overlay from '../sidebar/Overlay.svelte';
+	import { sidebarOpen } from '$lib/store';
 
 	// interface AppPageProps {
 	// 	contentComponent: any;
@@ -43,6 +45,9 @@
 	onMount(() => {
 		isDarkTheme = getThemeFromLocalStorage();
 		window.addEventListener('keydown', handleKeyDown);
+		sidebarOpen.subscribe((value) => {
+			isSideMenuOpen = value;
+		});
 	});
 
 	onDestroy(() => {
@@ -70,10 +75,15 @@
 	</script>
 </svelte:head>
 
-<div class="flex h-screen bg-gray-50 dark:bg-gray-900" class:overflow-hidden={!isSideMenuOpen}>
-	<AppSideMenu props={{ isPagesMenuOpen: isPagesMenuOpen, isSideMenuOpen: isSideMenuOpen }} />
+<div class="flex h-screen dark:bg-gray-900 bg-zinc-100 overflow-hidden w-screen">
+	<Overlay />
+	<Sidebar mobileOrientation="end" />
 
-	<div class="flex bg-stone-100 w-full flex-1 flex-col">
+	<div
+		class="flex flex-1 flex-col shadow-none"
+		class:sidebar-open={isSideMenuOpen}
+		class:sidebar-closed={!isSideMenuOpen}
+	>
 		<AppHeader
 			bind:isSideMenuOpen
 			props={{
@@ -83,8 +93,29 @@
 				isProfileMenuOpen: isProfileMenuOpen
 			}}
 		/>
-		<main class="m-4 shadow-md bg-white h-full"><slot /></main>
-
-		<!-- <svelte:component this={props.contentComponent} /> -->
+		<main
+			class="bg-zinc-100 shadow-md dark:text-dark-text dark:bg-dark-background text-light-text bg-light-background h-full"
+		>
+			<slot />
+		</main>
 	</div>
 </div>
+
+<style>
+	.sidebar-open {
+		margin-left: 256px; /* adjust this value based on your sidebar width */
+		transition: margin-left 0.3s ease;
+	}
+
+	.sidebar-closed {
+		margin-left: 90px;
+		/* adjust this value based on your sidebar width */
+		transition: margin-left 0.7s ease;
+	}
+
+	/* .main-content {
+		margin-left: 0;
+	}
+	.main-content.ml-64 {
+		margin-left: 256px; /* adjust this value based on your sidebar width */
+</style>

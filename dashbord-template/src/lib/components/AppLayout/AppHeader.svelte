@@ -3,6 +3,8 @@
 	import { clickoutside } from '@svelte-put/clickoutside';
 	import ButtonDropdown from '../ButtonDropdown.svelte';
 	import type { Link } from '$lib/data/links';
+	import { openSidebar } from '$lib/store';
+	import profile from '$lib/public/9.jpg';
 
 	interface DashboardHeaderProps {
 		toggleTheme: () => void;
@@ -48,12 +50,23 @@
 </script>
 
 <header
-	class="z-10 border-b-[1px] border-gray-200 bg-white py-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 shadow-lg"
+	class="z-10 border-b-[1px] border-gray-200 bg-white py-4 px-4 dark:border-gray-700 dark:bg-gray-800"
 >
 	<div
-		class="container mx-auto flex h-full items-center justify-between px-6 text-orange-600 dark:text-orange-300"
+		class="dark:text-dark-text container mx-auto flex h-full items-center justify-between text-orange-600 dark:text-orange-300"
 	>
 		<!-- Mobile hamburger -->
+
+		<button
+			type="button"
+			aria-expanded="false"
+			aria-label="Toggle sidenav"
+			on:click={openSidebar}
+			class="text-4xl pr-4 focus:outline-none lg:visible text-light-text dark:text-dark-text"
+		>
+			&#8801;
+		</button>
+
 		<button
 			type="button"
 			class="mr-5 -ml-1 rounded-md p-1 focus:outline-none focus:ring-[3px] focus:ring-orange-200 dark:focus:ring-gray-500 md:hidden"
@@ -75,7 +88,7 @@
 			<div class="relative mr-6 w-full focus-within:text-orange-500">
 				<div class="absolute inset-y-0 flex items-center pl-2">
 					<svg
-						class="h-4 w-4 text-orange-600"
+						class="h-4 w-4 text-light-text dark:text-dark-text"
 						aria-hidden="true"
 						fill="currentColor"
 						viewBox="0 0 20 20"
@@ -88,7 +101,7 @@
 					</svg>
 				</div>
 				<input
-					class="form-input w-full rounded-md border-0 bg-gray-100 pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 focus:border-orange-300 focus:bg-white focus:placeholder-gray-500 focus:outline-none focus:ring-[3px] focus:ring-orange-200 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:placeholder-gray-600 dark:focus:ring-gray-500"
+					class="form-input w-full rounded-md border-0 bg-gray-100 pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 focus:border-light-text focus:bg-white focus:placeholder-gray-500 focus:outline-none focus:ring-[3px] focus:ring-neutral-400 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:placeholder-gray-600 dark:focus:ring-gray-500"
 					type="text"
 					placeholder="Procurar..."
 					aria-label="Procurar..."
@@ -97,7 +110,7 @@
 		</div>
 		<ul class="flex flex-shrink-0 items-center space-x-6">
 			<!-- Theme toggler -->
-			<li class="flex">
+			<li class="flex text-orange-500 dark:text-dark-text">
 				<button
 					class="rounded-md focus:outline-none focus:ring-[3px] focus:ring-orange-200 dark:focus:ring-gray-500"
 					on:click={props.toggleTheme}
@@ -120,7 +133,7 @@
 				</button>
 			</li>
 			<!-- Notifications menu -->
-			<li class="relative">
+			<li class="relative text-light-text dark:text-dark-text">
 				<button
 					use:clickoutside
 					on:clickoutside={() => {
@@ -192,7 +205,7 @@
 			<!-- Profile menu -->
 
 			<ButtonDropdown on:click={() => handleState('dropdown')} {links} bind:isOpen={isOpenDropdown}>
-				<img src="/static/assets/img/9.jpg" class="w-9" alt="Username" />
+				<img src={profile} class="w-6" alt="Username" />
 			</ButtonDropdown>
 		</ul>
 	</div>
