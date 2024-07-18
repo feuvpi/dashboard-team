@@ -6,5 +6,16 @@
 	export let data: PageData;
 </script>
 
-<PageTitle name="Plantel" />
-<Table />
+<main class="p-2">
+	<PageTitle name="Plantel" />
+	<div class="mt-4 mx-4">
+		<div class="mb-2">
+			<button
+				class="inline-flex items-center px-4 py-2 text-center text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-300"
+				>ADICIONAR ATLETA</button
+			>
+		</div>
+
+		<Table />
+	</div>
+</main>

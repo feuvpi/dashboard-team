@@ -75,7 +75,7 @@
 	</script>
 </svelte:head>
 
-<div class="flex h-screen dark:bg-gray-900 bg-zinc-100 overflow-hidden w-screen">
+<div class="flex h-screen dark:bg-dark-background bg-gray-200 overflow-hidden w-screen">
 	<Overlay />
 	<Sidebar mobileOrientation="end" />
 
@@ -94,7 +94,7 @@
 			}}
 		/>
 		<main
-			class="bg-zinc-100 shadow-md dark:text-dark-text dark:bg-dark-background text-light-text bg-light-background h-full"
+			class="bg-light-background mr-4 shadow-md dark:text-dark-text dark:shadow-none dark:bg-gray-700 rounded-xl m-4 text-light-text h-full"
 		>
 			<slot />
 		</main>
@@ -104,13 +104,13 @@
 <style>
 	.sidebar-open {
 		margin-left: 256px; /* adjust this value based on your sidebar width */
-		transition: margin-left 0.3s ease;
+		transition: margin-left 0.5s ease;
 	}
 
 	.sidebar-closed {
 		margin-left: 90px;
 		/* adjust this value based on your sidebar width */
-		transition: margin-left 0.7s ease;
+		transition: margin-left 1.5s ease;
 	}
 
 	/* .main-content {

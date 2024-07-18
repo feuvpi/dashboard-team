@@ -50,7 +50,7 @@
 </script>
 
 <header
-	class="z-10 border-b-[1px] border-gray-200 bg-white py-4 px-4 dark:border-gray-700 dark:bg-gray-800"
+	class="z-10 border-gray-200 bg-white py-4 px-4 dark:border-gray-700 dark:bg-gray-800 shadow-md dark:shadow-none"
 >
 	<div
 		class="dark:text-dark-text container mx-auto flex h-full items-center justify-between text-orange-600 dark:text-orange-300"
@@ -85,7 +85,7 @@
 		<!-- <div class="flex flex-1 justify-center lg:mr-32"> -->
 		<div class="flex flex-1 justify-center">
 			<!-- <div class="relative mr-6 w-full max-w-xl focus-within:text-purple-500"> -->
-			<div class="relative mr-6 w-full focus-within:text-orange-500">
+			<div class="relative mr-6 w-full">
 				<div class="absolute inset-y-0 flex items-center pl-2">
 					<svg
 						class="h-4 w-4 text-light-text dark:text-dark-text"
@@ -101,7 +101,7 @@
 					</svg>
 				</div>
 				<input
-					class="form-input w-full rounded-md border-0 bg-gray-100 pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 focus:border-light-text focus:bg-white focus:placeholder-gray-500 focus:outline-none focus:ring-[3px] focus:ring-neutral-400 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:placeholder-gray-600 dark:focus:ring-gray-500"
+					class="form-input w-full rounded-md border-0 bg-gray-200 pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 dark:placeholder-gray-200 focus:border-light-text focus:bg-white focus:placeholder-gray-500 focus:outline-none focus:ring-[3px] focus:ring-neutral-400 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:placeholder-gray-600 dark:focus:ring-gray-500"
 					type="text"
 					placeholder="Procurar..."
 					aria-label="Procurar..."

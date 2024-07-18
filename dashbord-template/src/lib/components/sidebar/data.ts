@@ -7,33 +7,28 @@ import DocumentationIcon from './icons/DocumentationIcon.svelte';
 
 export const data = [
 	{
-		title: 'Home',
+		title: 'Resumo',
 		icon: HomeIcon,
-		link: '/'
+		link: '/app'
 	},
 	{
-		title: 'Status',
+		title: 'PlantelStatus',
 		icon: StatusIcon,
-		link: '/admin/status'
+		link: '/app/plantel'
 	},
 	{
-		title: 'Archives',
+		title: 'Times',
 		icon: ArchivesIcon,
-		link: '/admin/archives'
+		link: '/app/times'
 	},
 	{
-		title: 'Credits',
+		title: 'Desempenho',
 		icon: CreditsIcon,
-		link: '/admin/credits'
+		link: '/app/desempenho'
 	},
 	{
-		title: 'Settings',
+		title: 'Partidas',
 		icon: SettingsIcon,
-		link: '/admin/settings'
-	},
-	{
-		title: 'Documentation',
-		icon: DocumentationIcon,
-		link: '/admin/documentation'
+		link: '/app/partidas'
 	}
 ];

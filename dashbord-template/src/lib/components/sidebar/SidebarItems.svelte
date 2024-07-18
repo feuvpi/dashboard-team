@@ -5,7 +5,7 @@
 
 	const style = {
 		title: `mx-4 text-sm whitespace-pre dark:text-dark-text text-light-text`,
-		active: `bg-gray-700 rounded-full`,
+		active: `bg-neutral-500/70 dark:bg-neutral-600 rounded-full`,
 		link: `flex items-center justify-start my-1 p-3 w-full hover:text-white whitespace-pre`,
 		close: `lg:duration-700 lg:ease-out lg:invisible lg:opacity-0 lg:transition-all`,
 		open: `lg:duration-500 lg:ease-in lg:h-auto lg:opacity-100 lg:transition-all lg:w-auto`
